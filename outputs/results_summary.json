@@ -1,0 +1,805 @@
+{
+  "audit": {
+    "rows": 28,
+    "commodities": 24,
+    "series": 28,
+    "seasons": {
+      "Kharif Crops": 17,
+      "Rabi Crops": 7,
+      "Other Crops": 4
+    },
+    "missing_cells": 0,
+    "duplicate_rows": 0,
+    "non_numeric_cells": 0,
+    "variety_na_rows": 0,
+    "monotonic_series": 28,
+    "non_monotonic_series": [],
+    "min_msp": 1410.0,
+    "max_msp": 10600.0
+  },
+  "backtest_winner": "ARIMA(1,1,0)",
+  "backtest_scores": [
+    {
+      "Model": "ARIMA(1,1,0)",
+      "MAE": 141.277,
+      "RMSE": 217.215,
+      "MAPE": 2.904,
+      "Bias": -63.6,
+      "MASE": 0.522,
+      "Folds": 84
+    },
+    {
+      "Model": "Naive",
+      "MAE": 270.595,
+      "RMSE": 340.407,
+      "MAPE": 5.469,
+      "Bias": -270.595,
+      "MASE": 1.0,
+      "Folds": 84
+    },
+    {
+      "Model": "GradBoost",
+      "MAE": 270.595,
+      "RMSE": 340.407,
+      "MAPE": 5.469,
+      "Bias": -270.595,
+      "MASE": 1.0,
+      "Folds": 84
+    },
+    {
+      "Model": "Drift",
+      "MAE": 360.944,
+      "RMSE": 566.381,
+      "MAPE": 7.149,
+      "Bias": 313.802,
+      "MASE": 1.334,
+      "Folds": 84
+    },
+    {
+      "Model": "RandomForest",
+      "MAE": 384.807,
+      "RMSE": 482.867,
+      "MAPE": 7.632,
+      "Bias": -384.807,
+      "MASE": 1.422,
+      "Folds": 84
+    },
+    {
+      "Model": "Holt",
+      "MAE": 421.775,
+      "RMSE": 615.879,
+      "MAPE": 8.532,
+      "Bias": 374.136,
+      "MASE": 1.559,
+      "Folds": 84
+    },
+    {
+      "Model": "Linear",
+      "MAE": 422.369,
+      "RMSE": 615.9,
+      "MAPE": 8.546,
+      "Bias": 373.54,
+      "MASE": 1.561,
+      "Folds": 84
+    },
+    {
+      "Model": "Ensemble",
+      "MAE": 426.434,
+      "RMSE": 627.385,
+      "MAPE": 8.589,
+      "Bias": 379.51,
+      "MASE": 1.576,
+      "Folds": 84
+    },
+    {
+      "Model": "RidgePoly2",
+      "MAE": 506.631,
+      "RMSE": 897.093,
+      "MAPE": 9.79,
+      "Bias": 489.679,
+      "MASE": 1.872,
+      "Folds": 84
+    },
+    {
+      "Model": "CAGR",
+      "MAE": 624.54,
+      "RMSE": 961.199,
+      "MAPE": 12.634,
+      "Bias": 589.221,
+      "MASE": 2.308,
+      "Folds": 84
+    }
+  ],
+  "holdout_winner": "RidgePoly2",
+  "champion_named_model": "RidgePoly2",
+  "holdout_scores": [
+    {
+      "Model": "RidgePoly2",
+      "MAE": 171.071,
+      "RMSE": 310.841,
+      "MAPE": 2.767,
+      "Bias": 90.438,
+      "MASE": 0.394,
+      "N": 42,
+      "Within_5pct": 78.571
+    },
+    {
+      "Model": "Drift",
+      "MAE": 163.107,
+      "RMSE": 230.917,
+      "MAPE": 2.924,
+      "Bias": 17.974,
+      "MASE": 0.376,
+      "N": 42,
+      "Within_5pct": 78.571
+    },
+    {
+      "Model": "Ensemble",
+      "MAE": 218.714,
+      "RMSE": 338.077,
+      "MAPE": 3.777,
+      "Bias": 87.957,
+      "MASE": 0.504,
+      "N": 42,
+      "Within_5pct": 80.952
+    },
+    {
+      "Model": "Holt",
+      "MAE": 237.776,
+      "RMSE": 371.398,
+      "MAPE": 3.968,
+      "Bias": 56.805,
+      "MASE": 0.548,
+      "N": 42,
+      "Within_5pct": 78.571
+    },
+    {
+      "Model": "Linear",
+      "MAE": 231.933,
+      "RMSE": 347.308,
+      "MAPE": 4.01,
+      "Bias": 89.452,
+      "MASE": 0.534,
+      "N": 42,
+      "Within_5pct": 78.571
+    },
+    {
+      "Model": "Selected",
+      "MAE": 252.719,
+      "RMSE": 352.484,
+      "MAPE": 5.02,
+      "Bias": -196.633,
+      "MASE": 0.582,
+      "N": 42,
+      "Within_5pct": 59.524
+    },
+    {
+      "Model": "ARIMA(1,1,0)",
+      "MAE": 255.957,
+      "RMSE": 361.652,
+      "MAPE": 5.051,
+      "Bias": -249.167,
+      "MASE": 0.59,
+      "N": 42,
+      "Within_5pct": 57.143
+    },
+    {
+      "Model": "CAGR",
+      "MAE": 338.933,
+      "RMSE": 552.578,
+      "MAPE": 6.1,
+      "Bias": 261.081,
+      "MASE": 0.781,
+      "N": 42,
+      "Within_5pct": 57.143
+    },
+    {
+      "Model": "Naive",
+      "MAE": 434.19,
+      "RMSE": 531.569,
+      "MAPE": 8.431,
+      "Bias": -434.19,
+      "MASE": 1.0,
+      "N": 42,
+      "Within_5pct": 26.19
+    },
+    {
+      "Model": "GradBoost",
+      "MAE": 434.19,
+      "RMSE": 531.569,
+      "MAPE": 8.431,
+      "Bias": -434.19,
+      "MASE": 1.0,
+      "N": 42,
+      "Within_5pct": 26.19
+    },
+    {
+      "Model": "RandomForest",
+      "MAE": 505.664,
+      "RMSE": 604.594,
+      "MAPE": 9.76,
+      "Bias": -505.664,
+      "MASE": 1.165,
+      "N": 42,
+      "Within_5pct": 11.905
+    }
+  ],
+  "holdout_by_season": [
+    {
+      "Model": "Drift",
+      "Season_Label": "2022-23",
+      "MAE": 126.81,
+      "RMSE": 212.714,
+      "MAPE": 2.051,
+      "Bias": 51.924,
+      "MASE": 0.482,
+      "N": 21,
+      "Within_5pct": 90.476
+    },
+    {
+      "Model": "RidgePoly2",
+      "Season_Label": "2022-23",
+      "MAE": 170.143,
+      "RMSE": 354.38,
+      "MAPE": 2.391,
+      "Bias": 131.105,
+      "MASE": 0.646,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "ARIMA(1,1,0)",
+      "Season_Label": "2022-23",
+      "MAE": 134.081,
+      "RMSE": 176.152,
+      "MAPE": 2.746,
+      "Bias": -132.5,
+      "MASE": 0.509,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "Selected",
+      "Season_Label": "2022-23",
+      "MAE": 145.514,
+      "RMSE": 186.401,
+      "MAPE": 2.916,
+      "Bias": -131.038,
+      "MASE": 0.553,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "RidgePoly2",
+      "Season_Label": "2023-24",
+      "MAE": 172.0,
+      "RMSE": 260.114,
+      "MAPE": 3.143,
+      "Bias": 49.771,
+      "MASE": 0.284,
+      "N": 21,
+      "Within_5pct": 71.429
+    },
+    {
+      "Model": "Ensemble",
+      "Season_Label": "2022-23",
+      "MAE": 214.79,
+      "RMSE": 385.036,
+      "MAPE": 3.275,
+      "Bias": 145.562,
+      "MASE": 0.816,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "Holt",
+      "Season_Label": "2022-23",
+      "MAE": 224.533,
+      "RMSE": 389.847,
+      "MAPE": 3.385,
+      "Bias": 124.438,
+      "MASE": 0.853,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "Linear",
+      "Season_Label": "2022-23",
+      "MAE": 228.248,
+      "RMSE": 390.92,
+      "MAPE": 3.485,
+      "Bias": 148.733,
+      "MASE": 0.867,
+      "N": 21,
+      "Within_5pct": 85.714
+    },
+    {
+      "Model": "Drift",
+      "Season_Label": "2023-24",
+      "MAE": 199.405,
+      "RMSE": 247.787,
+      "MAPE": 3.796,
+      "Bias": -15.976,
+      "MASE": 0.329,
+      "N": 21,
+      "Within_5pct": 66.667
+    },
+    {
+      "Model": "Ensemble",
+      "Season_Label": "2023-24",
+      "MAE": 222.638,
+      "RMSE": 283.443,
+      "MAPE": 4.279,
+      "Bias": 30.352,
+      "MASE": 0.368,
+      "N": 21,
+      "Within_5pct": 76.19
+    },
+    {
+      "Model": "Linear",
+      "Season_Label": "2023-24",
+      "MAE": 235.619,
+      "RMSE": 297.367,
+      "MAPE": 4.535,
+      "Bias": 30.171,
+      "MASE": 0.389,
+      "N": 21,
+      "Within_5pct": 71.429
+    },
+    {
+      "Model": "Holt",
+      "Season_Label": "2023-24",
+      "MAE": 251.019,
+      "RMSE": 351.983,
+      "MAPE": 4.551,
+      "Bias": -10.829,
+      "MASE": 0.415,
+      "N": 21,
+      "Within_5pct": 71.429
+    },
+    {
+      "Model": "CAGR",
+      "Season_Label": "2022-23",
+      "MAE": 333.057,
+      "RMSE": 588.223,
+      "MAPE": 5.123,
+      "Bias": 275.248,
+      "MASE": 1.265,
+      "N": 21,
+      "Within_5pct": 57.143
+    },
+    {
+      "Model": "GradBoost",
+      "Season_Label": "2022-23",
+      "MAE": 263.19,
+      "RMSE": 294.924,
+      "MAPE": 5.276,
+      "Bias": -263.19,
+      "MASE": 1.0,
+      "N": 21,
+      "Within_5pct": 47.619
+    },
+    {
+      "Model": "Naive",
+      "Season_Label": "2022-23",
+      "MAE": 263.19,
+      "RMSE": 294.924,
+      "MAPE": 5.276,
+      "Bias": -263.19,
+      "MASE": 1.0,
+      "N": 21,
+      "Within_5pct": 47.619
+    },
+    {
+      "Model": "RandomForest",
+      "Season_Label": "2022-23",
+      "MAE": 335.786,
+      "RMSE": 374.932,
+      "MAPE": 6.633,
+      "Bias": -335.786,
+      "MASE": 1.276,
+      "N": 21,
+      "Within_5pct": 19.048
+    },
+    {
+      "Model": "CAGR",
+      "Season_Label": "2023-24",
+      "MAE": 344.81,
+      "RMSE": 514.47,
+      "MAPE": 7.076,
+      "Bias": 246.914,
+      "MASE": 0.57,
+      "N": 21,
+      "Within_5pct": 57.143
+    },
+    {
+      "Model": "Selected",
+      "Season_Label": "2023-24",
+      "MAE": 359.924,
+      "RMSE": 462.325,
+      "MAPE": 7.125,
+      "Bias": -262.229,
+      "MASE": 0.595,
+      "N": 21,
+      "Within_5pct": 33.333
+    },
+    {
+      "Model": "ARIMA(1,1,0)",
+      "Season_Label": "2023-24",
+      "MAE": 377.833,
+      "RMSE": 480.161,
+      "MAPE": 7.356,
+      "Bias": -365.833,
+      "MASE": 0.624,
+      "N": 21,
+      "Within_5pct": 28.571
+    },
+    {
+      "Model": "GradBoost",
+      "Season_Label": "2023-24",
+      "MAE": 605.19,
+      "RMSE": 691.485,
+      "MAPE": 11.586,
+      "Bias": -605.19,
+      "MASE": 1.0,
+      "N": 21,
+      "Within_5pct": 4.762
+    },
+    {
+      "Model": "Naive",
+      "Season_Label": "2023-24",
+      "MAE": 605.19,
+      "RMSE": 691.485,
+      "MAPE": 11.586,
+      "Bias": -605.19,
+      "MASE": 1.0,
+      "N": 21,
+      "Within_5pct": 4.762
+    },
+    {
+      "Model": "RandomForest",
+      "Season_Label": "2023-24",
+      "MAE": 675.543,
+      "RMSE": 768.436,
+      "MAPE": 12.887,
+      "Bias": -675.543,
+      "MASE": 1.116,
+      "N": 21,
+      "Within_5pct": 4.762
+    }
+  ],
+  "horizon_scores": [
+    {
+      "Model": "ARIMA(1,1,0)",
+      "Horizon": 1,
+      "MAE": 99.848,
+      "RMSE": 154.771,
+      "MAPE": 1.998,
+      "Bias": -40.792,
+      "MASE": 0.492
+    },
+    {
+      "Model": "Naive",
+      "Horizon": 1,
+      "MAE": 202.946,
+      "RMSE": 246.07,
+      "MAPE": 4.146,
+      "Bias": -202.946,
+      "MASE": 1.0
+    },
+    {
+      "Model": "GradBoost",
+      "Horizon": 1,
+      "MAE": 202.946,
+      "RMSE": 246.07,
+      "MAPE": 4.146,
+      "Bias": -202.946,
+      "MASE": 1.0
+    },
+    {
+      "Model": "Drift",
+      "Horizon": 1,
+      "MAE": 249.863,
+      "RMSE": 361.597,
+      "MAPE": 5.01,
+      "Bias": 214.863,
+      "MASE": 1.231
+    },
+    {
+      "Model": "RandomForest",
+      "Horizon": 1,
+      "MAE": 314.158,
+      "RMSE": 387.425,
+      "MAPE": 6.289,
+      "Bias": -314.158,
+      "MASE": 1.548
+    },
+    {
+      "Model": "Holt",
+      "Horizon": 1,
+      "MAE": 317.12,
+      "RMSE": 438.634,
+      "MAPE": 6.486,
+      "Bias": 281.048,
+      "MASE": 1.563
+    },
+    {
+      "Model": "Linear",
+      "Horizon": 1,
+      "MAE": 318.012,
+      "RMSE": 438.683,
+      "MAPE": 6.506,
+      "Bias": 280.155,
+      "MASE": 1.567
+    },
+    {
+      "Model": "Ensemble",
+      "Horizon": 1,
+      "MAE": 320.705,
+      "RMSE": 446.128,
+      "MAPE": 6.534,
+      "Bias": 285.037,
+      "MASE": 1.58
+    },
+    {
+      "Model": "RidgePoly2",
+      "Horizon": 1,
+      "MAE": 324.632,
+      "RMSE": 502.592,
+      "MAPE": 6.36,
+      "Bias": 306.46,
+      "MASE": 1.6
+    },
+    {
+      "Model": "CAGR",
+      "Horizon": 1,
+      "MAE": 450.335,
+      "RMSE": 641.942,
+      "MAPE": 9.194,
+      "Bias": 422.013,
+      "MASE": 2.219
+    },
+    {
+      "Model": "ARIMA(1,1,0)",
+      "Horizon": 2,
+      "MAE": 224.137,
+      "RMSE": 306.006,
+      "MAPE": 4.717,
+      "Bias": -109.217,
+      "MASE": 0.552
+    },
+    {
+      "Model": "Naive",
+      "Horizon": 2,
+      "MAE": 405.893,
+      "RMSE": 475.952,
+      "MAPE": 8.113,
+      "Bias": -405.893,
+      "MASE": 1.0
+    },
+    {
+      "Model": "GradBoost",
+      "Horizon": 2,
+      "MAE": 405.893,
+      "RMSE": 475.952,
+      "MAPE": 8.113,
+      "Bias": -405.893,
+      "MASE": 1.0
+    },
+    {
+      "Model": "RandomForest",
+      "Horizon": 2,
+      "MAE": 526.104,
+      "RMSE": 631.89,
+      "MAPE": 10.318,
+      "Bias": -526.104,
+      "MASE": 1.296
+    },
+    {
+      "Model": "Drift",
+      "Horizon": 2,
+      "MAE": 583.107,
+      "RMSE": 837.173,
+      "MAPE": 11.426,
+      "Bias": 511.679,
+      "MASE": 1.437
+    },
+    {
+      "Model": "Linear",
+      "Horizon": 2,
+      "MAE": 631.083,
+      "RMSE": 867.821,
+      "MAPE": 12.625,
+      "Bias": 560.31,
+      "MASE": 1.555
+    },
+    {
+      "Model": "Holt",
+      "Horizon": 2,
+      "MAE": 631.085,
+      "RMSE": 867.825,
+      "MAPE": 12.625,
+      "Bias": 560.312,
+      "MASE": 1.555
+    },
+    {
+      "Model": "Ensemble",
+      "Horizon": 2,
+      "MAE": 637.89,
+      "RMSE": 884.747,
+      "MAPE": 12.7,
+      "Bias": 568.456,
+      "MASE": 1.572
+    },
+    {
+      "Model": "RidgePoly2",
+      "Horizon": 2,
+      "MAE": 870.629,
+      "RMSE": 1381.712,
+      "MAPE": 16.651,
+      "Bias": 856.117,
+      "MASE": 2.145
+    },
+    {
+      "Model": "CAGR",
+      "Horizon": 2,
+      "MAE": 972.95,
+      "RMSE": 1395.54,
+      "MAPE": 19.514,
+      "Bias": 923.636,
+      "MASE": 2.397
+    }
+  ],
+  "best_model_counts": {
+    "ARIMA(1,1,0)": 15,
+    "Drift": 4,
+    "RidgePoly2": 3,
+    "CAGR": 3,
+    "Naive": 2,
+    "Linear": 1
+  },
+  "growth_top5": [
+    {
+      "Series": "Ragi",
+      "Season": "Kharif Crops",
+      "First_MSP": 1900.0,
+      "Last_MSP": 3377.0,
+      "Absolute_Increase": 1477.0,
+      "Total_Growth_pct": 77.74,
+      "CAGR_pct": 15.46,
+      "Mean_YoY_pct": 17.07,
+      "Volatility_YoY_pct": 23.74,
+      "Max_YoY_pct": 52.47,
+      "Min_YoY_pct": 2.49
+    },
+    {
+      "Series": "Nigerseed",
+      "Season": "Kharif Crops",
+      "First_MSP": 4050.0,
+      "Last_MSP": 6930.0,
+      "Absolute_Increase": 2880.0,
+      "Total_Growth_pct": 71.11,
+      "CAGR_pct": 14.37,
+      "Mean_YoY_pct": 15.6,
+      "Volatility_YoY_pct": 20.3,
+      "Max_YoY_pct": 45.11,
+      "Min_YoY_pct": 1.07
+    },
+    {
+      "Series": "Jowar (Hybrid)",
+      "Season": "Kharif Crops",
+      "First_MSP": 1700.0,
+      "Last_MSP": 2738.0,
+      "Absolute_Increase": 1038.0,
+      "Total_Growth_pct": 61.06,
+      "CAGR_pct": 12.65,
+      "Mean_YoY_pct": 13.78,
+      "Volatility_YoY_pct": 19.46,
+      "Max_YoY_pct": 42.94,
+      "Min_YoY_pct": 2.75
+    },
+    {
+      "Series": "Jowar (Maldandi)",
+      "Season": "Kharif Crops",
+      "First_MSP": 1725.0,
+      "Last_MSP": 2758.0,
+      "Absolute_Increase": 1033.0,
+      "Total_Growth_pct": 59.88,
+      "CAGR_pct": 12.45,
+      "Mean_YoY_pct": 13.53,
+      "Volatility_YoY_pct": 19.02,
+      "Max_YoY_pct": 42.03,
+      "Min_YoY_pct": 2.72
+    },
+    {
+      "Series": "De-Husked Coconut",
+      "Season": "Other Crops",
+      "First_MSP": 1760.0,
+      "Last_MSP": 2800.0,
+      "Absolute_Increase": 1040.0,
+      "Total_Growth_pct": 59.09,
+      "CAGR_pct": 12.31,
+      "Mean_YoY_pct": 12.68,
+      "Volatility_YoY_pct": 10.67,
+      "Max_YoY_pct": 26.65,
+      "Min_YoY_pct": 3.7
+    }
+  ],
+  "growth_bottom5": [
+    {
+      "Series": "Gram",
+      "Season": "Rabi Crops",
+      "First_MSP": 4400.0,
+      "Last_MSP": 5230.0,
+      "Absolute_Increase": 830.0,
+      "Total_Growth_pct": 18.86,
+      "CAGR_pct": 4.41,
+      "Mean_YoY_pct": 4.42,
+      "Volatility_YoY_pct": 1.3,
+      "Max_YoY_pct": 5.52,
+      "Min_YoY_pct": 2.55
+    },
+    {
+      "Series": "Urad",
+      "Season": "Kharif Crops",
+      "First_MSP": 5400.0,
+      "Last_MSP": 6300.0,
+      "Absolute_Increase": 900.0,
+      "Total_Growth_pct": 16.67,
+      "CAGR_pct": 3.93,
+      "Mean_YoY_pct": 3.94,
+      "Volatility_YoY_pct": 1.59,
+      "Max_YoY_pct": 5.26,
+      "Min_YoY_pct": 1.79
+    },
+    {
+      "Series": "Wheat",
+      "Season": "Rabi Crops",
+      "First_MSP": 1735.0,
+      "Last_MSP": 2015.0,
+      "Absolute_Increase": 280.0,
+      "Total_Growth_pct": 16.14,
+      "CAGR_pct": 3.81,
+      "Mean_YoY_pct": 3.82,
+      "Volatility_YoY_pct": 1.86,
+      "Max_YoY_pct": 6.05,
+      "Min_YoY_pct": 2.03
+    },
+    {
+      "Series": "Barley",
+      "Season": "Rabi Crops",
+      "First_MSP": 1410.0,
+      "Last_MSP": 1635.0,
+      "Absolute_Increase": 225.0,
+      "Total_Growth_pct": 15.96,
+      "CAGR_pct": 3.77,
+      "Mean_YoY_pct": 3.78,
+      "Volatility_YoY_pct": 1.92,
+      "Max_YoY_pct": 5.9,
+      "Min_YoY_pct": 2.13
+    },
+    {
+      "Series": "Arhar(Tur)",
+      "Season": "Kharif Crops",
+      "First_MSP": 5450.0,
+      "Last_MSP": 6300.0,
+      "Absolute_Increase": 850.0,
+      "Total_Growth_pct": 15.6,
+      "CAGR_pct": 3.69,
+      "Mean_YoY_pct": 3.69,
+      "Volatility_YoY_pct": 1.18,
+      "Max_YoY_pct": 5.0,
+      "Min_YoY_pct": 2.2
+    }
+  ],
+  "n_holdout_points": 42,
+  "figures": {
+    "trends": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig1_msp_trends.png",
+    "growth": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig2_cagr_by_series.png",
+    "leaderboard": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig3_model_leaderboard.png",
+    "parity": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig4_holdout_parity.png",
+    "panels": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig5_forecast_panels.png",
+    "bias": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig6_holdout_bias.png",
+    "horizon": "/home/user/Agriculture-Data-Set-Project/outputs/figures/fig7_horizon_error.png"
+  }
+}

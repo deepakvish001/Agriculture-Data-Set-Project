@@ -1,0 +1,29 @@
+Series,Best_Model,MAE,RMSE,MAPE,MASE
+Arhar(Tur),RidgePoly2,37.202,49.373,0.594,0.112
+Bajra,"ARIMA(1,1,0)",116.827,141.974,5.278,0.701
+Barley,Drift,16.944,19.442,1.044,0.231
+Copra (Ball),"ARIMA(1,1,0)",211.017,215.613,2.016,0.465
+Copra (Milling),"ARIMA(1,1,0)",220.749,225.838,2.171,0.407
+Cotton (Long Staple),"ARIMA(1,1,0)",220.538,262.966,3.703,0.696
+Cotton (Medium Staple),"ARIMA(1,1,0)",216.648,253.989,3.829,0.69
+De-Husked Coconut,Naive,152.667,162.36,5.509,1.0
+Gram,Linear,76.111,90.618,1.456,0.322
+Groundnut,Drift,105.0,129.904,1.934,0.342
+Jowar (Hybrid),"ARIMA(1,1,0)",40.873,50.198,1.494,0.326
+Jowar (Maldandi),"ARIMA(1,1,0)",40.816,50.051,1.481,0.326
+Jute,CAGR,32.212,35.802,0.733,0.088
+Maize,"ARIMA(1,1,0)",50.93,51.359,2.734,0.695
+Masur (Lentil),CAGR,63.384,72.446,1.159,0.136
+Moong,"ARIMA(1,1,0)",94.559,117.116,1.305,0.63
+Nigerseed,Drift,578.889,649.173,8.385,0.877
+Paddy (Common),"ARIMA(1,1,0)",30.932,35.512,1.601,0.371
+Paddy (Grade 'A'),"ARIMA(1,1,0)",28.066,32.463,1.437,0.337
+Ragi,"ARIMA(1,1,0)",48.317,51.129,1.437,0.319
+Rapeseed/Mustard,RidgePoly2,66.17,77.517,1.338,0.159
+Safflower,"ARIMA(1,1,0)",56.785,58.781,1.052,0.377
+Sesamum,Drift,217.278,248.781,3.04,0.396
+Soyabean (Yellow),Naive,160.0,174.547,4.077,1.0
+Sunflower Seed,"ARIMA(1,1,0)",73.773,84.831,1.236,0.303
+Toria,CAGR,62.927,71.952,1.29,0.151
+Urad,RidgePoly2,126.397,135.246,2.037,0.316
+Wheat,"ARIMA(1,1,0)",38.207,47.216,1.907,0.637
