@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [claude/data-gov-project-gn9ii8]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: Pytest
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # The suite fits SARIMAX models, so it is slow rather than heavy —
+      # roughly 85s locally. No need to split it up yet.
+      - name: Run tests
+        run: python -m pytest -q
+
+      # Catches a syntax error in a module the tests happen not to import,
+      # e.g. tools/ or the Streamlit entrypoint.
+      - name: Byte-compile every module
+        run: python -m compileall -q src app tools run_pipeline.py
